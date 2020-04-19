@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Generate a ReadMe with Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JINJ95/ReadMe-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JINJ95/ReadMe-Generator/issues"
+  },
+  "homepage": "https://github.com/JINJ95/ReadMe-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  }
+}
