@@ -1,11 +1,20 @@
 // fs is a Node standard library package for reading and writing files
 var fs = require("fs");
 
+// Markdown
+var MarkdownIt = require('markdown-it');
+    md = new MarkdownIt();
+    //var title = md.render('# Title:');
+
 //inquirer
 const inquirer = require('inquirer');
-
 inquirer
     .prompt([
+        {
+            name: 'Title',
+            message: 'What is your Project Title?',
+            default: 'Enter Title',
+        },
         {
             name: 'GitHubUsername',
             message: 'What is your GitHub Username?',
@@ -19,10 +28,19 @@ inquirer
     ])
     .then(answers => {
         //console.info('Answers:', answers);
+        var projectTitle = md.render('# ' + answers.Title);
 //FS
-        fs.appendFile('ReadMe.txt','Username:' + answers.GitHubUsername, function (err) {
+        fs.appendFile('ReadMe.txt',projectTitle + '\n',function (err) {
             if (err) throw err;
-            console.log('Saved!');
+            console.log('title saved');
+        })
+        fs.appendFile('ReadMe.txt','Username:' + answers.GitHubUsername + '\n', function (err) {
+            if (err) throw err;
+            console.log('Username Saved!');
+        });
+        fs.appendFile('ReadMe.txt','badge:' + answers.badge + '\n', function (err) {
+            if (err) throw err;
+            console.log('badge Saved!');
         });
     });
 
