@@ -30,15 +30,15 @@ inquirer
         //console.info('Answers:', answers);
         var projectTitle = md.render('# ' + answers.Title);
 //FS
-        fs.appendFile('ReadMe.txt',projectTitle + '\n',function (err) {
+        fs.appendFile(answers.Title + '.md',projectTitle + '\n',function (err) {
             if (err) throw err;
             console.log('title saved');
         })
-        fs.appendFile('ReadMe.txt','Username:' + answers.GitHubUsername + '\n', function (err) {
+        fs.appendFile(answers.Title + '.md','Username:' + answers.GitHubUsername + '\n', function (err) {
             if (err) throw err;
             console.log('Username Saved!');
         });
-        fs.appendFile('ReadMe.txt','badge:' + answers.badge + '\n', function (err) {
+        fs.appendFile(answers.Title + '.md','badge:' + answers.badge + '\n', function (err) {
             if (err) throw err;
             console.log('badge Saved!');
         });
