@@ -3,8 +3,8 @@ var fs = require("fs");
 
 // Markdown
 var MarkdownIt = require('markdown-it');
-    md = new MarkdownIt();
-    //var title = md.render('# Title:');
+md = new MarkdownIt();
+//var title = md.render('# Title:');
 
 //inquirer
 const inquirer = require('inquirer');
@@ -29,19 +29,19 @@ inquirer
     .then(answers => {
         //console.info('Answers:', answers);
         var projectTitle = md.render('# ' + answers.Title);
-//FS
-        fs.appendFile(answers.Title + '.md',projectTitle + '\n',function (err) {
-            if (err) throw err;
-            console.log('title saved');
-        })
-        fs.appendFile(answers.Title + '.md','Username:' + answers.GitHubUsername + '\n', function (err) {
-            if (err) throw err;
-            console.log('Username Saved!');
-        });
-        fs.appendFile(answers.Title + '.md','badge:' + answers.badge + '\n', function (err) {
+        //FS
+        fs.appendFile('./Assets/README.md', 'badge:' + answers.badge + '\n', function (err) {
             if (err) throw err;
             console.log('badge Saved!');
         });
+        fs.appendFile('./Assets/README.md', 'Username:' + answers.GitHubUsername + '\n', function (err) {
+            if (err) throw err;
+            console.log('Username Saved!');
+        });
+        fs.appendFile('./Assets/README.md', projectTitle + '\n', function (err) {
+            if (err) throw err;
+            console.log('title saved');
+        })
     });
 
 
