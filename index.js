@@ -13,57 +13,57 @@ inquirer
         {
             name: 'Title',
             message: 'What is your Project Title?',
-            default: 'Enter Title',
+            default: 'Title',
         },
         {
             name: 'Description',
             message: 'What is the description of your project?',
-            default: 'Enter description',
+            default: 'Description',
         },
         {
             name: 'Table of Contents',
-            message: 'What is Table of Contents?',
-            default: '',
+            message: 'Table of Contents?',
+            default: 'Table of Contents',
         },
         {
             name: 'Installation',
             message: 'How do you install your project?',
-            default: '',
+            default: 'Installation',
         },
         {
             name: 'Usage',
             message: 'How do you use your project?',
-            default: '',
+            default: 'Use',
         },
         {
             name: 'License',
             message: 'What license does your project hold?',
-            default: '',
+            default: 'License',
         },
         {
             name: 'Contributing',
             message: 'How to contribute?',
-            default: '',
+            default: 'Contribute',
         },
         {
             name: 'Tests',
-            message: 'What tests have you performed?',
-            default: '',
+            message: 'How to test?',
+            default: 'Test',
         },
         {
             name: 'Questions',
             message: 'Common questions?',
-            default: '',
+            default: 'Question',
         },
         {
             name: 'GitHubUsername',
             message: 'What is your GitHub Username?',
-            default: 'Enter your GitHub Username!',
+            default: 'Username',
         },
         {
             name: 'badge',
             message: 'What is your badge specific to the repository?',
-            default: 'Enter 1 badge!',
+            default: 'Badge',
         },
     ])
     .then(answers => {
@@ -80,14 +80,24 @@ inquirer
         fs.appendFileSync('./Assets/README.md', descriptionTitle + '\n', function (err) {
             if (err) throw err;
         })
+        fs.appendFileSync('./Assets/README.md', answers.Description + '\n', function (err) {
+            if (err) throw err;
+        })
         //Table of Contents
         var tableOfContentsTitle = md.render('# Table of Contents');
         fs.appendFileSync('./Assets/README.md', tableOfContentsTitle + '\n', function (err) {
             if (err) throw err;
         })
+        fs.appendFileSync('./Assets/README.md', answers["Table of Contents"] + '\n', function (err) {
+            if (err) throw err;
+        })
+
         //Installation
         var installationTitle = md.render('# Installation');
         fs.appendFileSync('./Assets/README.md', installationTitle + '\n', function (err) {
+            if (err) throw err;
+        })
+        fs.appendFileSync('./Assets/README.md', answers.Installation + '\n', function (err) {
             if (err) throw err;
         })
         //Usage
@@ -95,9 +105,15 @@ inquirer
         fs.appendFileSync('./Assets/README.md', usageTitle + '\n', function (err) {
             if (err) throw err;
         })
+        fs.appendFileSync('./Assets/README.md', answers.Usage + '\n', function (err) {
+            if (err) throw err;
+        })
         //License
         var licenseTitle = md.render('# License');
         fs.appendFileSync('./Assets/README.md', licenseTitle + '\n', function (err) {
+            if (err) throw err;
+        })
+        fs.appendFileSync('./Assets/README.md', answers.License + '\n', function (err) {
             if (err) throw err;
         })
         //Contributing
@@ -105,14 +121,23 @@ inquirer
         fs.appendFileSync('./Assets/README.md', contributingTitle + '\n', function (err) {
             if (err) throw err;
         })
+        fs.appendFileSync('./Assets/README.md', answers.Contributing + '\n', function (err) {
+            if (err) throw err;
+        })
         //Tests
         var testsTitle = md.render('# Tests');
         fs.appendFileSync('./Assets/README.md', testsTitle + '\n', function (err) {
             if (err) throw err;
         })
+        fs.appendFileSync('./Assets/README.md', answers.Tests + '\n', function (err) {
+            if (err) throw err;
+        })
         //Questions
         var questionsTitle = md.render('# Questions');
         fs.appendFileSync('./Assets/README.md', questionsTitle + '\n', function (err) {
+            if (err) throw err;
+        })
+        fs.appendFileSync('./Assets/README.md', answers.Questions + '\n', function (err) {
             if (err) throw err;
         })
 
