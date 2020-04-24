@@ -1,29 +1,39 @@
 // fs is a Node standard library package for reading and writing files
-var fs = require("fs");
-
+const fs = require("fs");
+const axios = require("axios");
+const inquirer = require('inquirer');
+const MarkdownIt = require('markdown-it');
+const util = require('util');
 // Markdown
-var MarkdownIt = require('markdown-it');
 md = new MarkdownIt();
-//var title = md.render('# Title:');
 
 //inquirer
-const inquirer = require('inquirer');
 inquirer
     .prompt([
         {
+            name: 'username',
+            message: 'What is your GitHub Username?',
+            default: '',
+        },
+        {
+            name: 'email',
+            message: 'What is your GitHub Email?',
+            default: '',
+        },
+        {
+            name: 'photo',
+            message: 'Would you like to display your GitHub profile picture?',
+            default: 'yes or no',
+        },
+        {
             name: 'Title',
-            message: 'What is your Project Title?',
+            message: 'Enter your Project Title?',
             default: 'Title',
         },
         {
             name: 'Description',
-            message: 'What is the description of your project?',
+            message: 'Describe your project:',
             default: 'Description',
-        },
-        {
-            name: 'Table of Contents',
-            message: 'Table of Contents?',
-            default: 'Table of Contents',
         },
         {
             name: 'Installation',
@@ -55,19 +65,23 @@ inquirer
             message: 'Common questions?',
             default: 'Question',
         },
-        {
-            name: 'GitHubUsername',
-            message: 'What is your GitHub Username?',
-            default: 'Username',
-        },
-        {
-            name: 'badge',
-            message: 'What is your badge specific to the repository?',
-            default: 'Badge',
-        },
     ])
     .then(answers => {
         //console.info('Answers:', answers);
+        //github
+        const queryUrl = `https://api.github.com/users/${answers.username}`;
+        axios.get(queryUrl).then(function (res) {
+            //if yes to profile picture
+            if (answers.photo === 'yes') {
+                var photo = md.render(`![Profile Picture](${res.data.avatar_url})`);
+                fs.appendFileSync('./Assets/README.md', photo + '\n', function (err) {
+                    if (err) throw err;
+                })
+            }
+            return console.log(res);
+        });
+        //
+
         //Title
         //creates a variable for title that is <h1> in MD
         var projectTitle = md.render('# ' + answers.Title);
@@ -88,7 +102,8 @@ inquirer
         fs.appendFileSync('./Assets/README.md', tableOfContentsTitle + '\n', function (err) {
             if (err) throw err;
         })
-        fs.appendFileSync('./Assets/README.md', answers["Table of Contents"] + '\n', function (err) {
+        const tableOfContents = md.render('* Installation \n * Usage \n * License \n * Contributing \n * Tests \n * Questions');
+        fs.appendFileSync('./Assets/README.md', tableOfContents + '\n', function (err) {
             if (err) throw err;
         })
 

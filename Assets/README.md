@@ -5,7 +5,15 @@
 Description
 <h1>Table of Contents</h1>
 
-Table of Contents
+<ul>
+<li>Installation</li>
+<li>Usage</li>
+<li>License</li>
+<li>Contributing</li>
+<li>Tests</li>
+<li>Questions</li>
+</ul>
+
 <h1>Installation</h1>
 
 Installation
@@ -24,3 +32,5 @@ Test
 <h1>Questions</h1>
 
 Question
+<p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4" alt="Profile Picture"></p>
+
