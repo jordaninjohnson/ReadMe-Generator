@@ -1,3 +1,5 @@
+<p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4" alt="Profile Picture"></p>
+
 <h1>Title</h1>
 
 <h1>Description</h1>
@@ -6,12 +8,12 @@ Description
 <h1>Table of Contents</h1>
 
 <ul>
-<li>Installation</li>
-<li>Usage</li>
-<li>License</li>
-<li>Contributing</li>
-<li>Tests</li>
-<li>Questions</li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#tests">Tests</a></li>
+<li><a href="#questions">Questions</a></li>
 </ul>
 
 <h1>Installation</h1>
@@ -32,5 +34,3 @@ Test
 <h1>Questions</h1>
 
 Question
-<p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4" alt="Profile Picture"></p>
-
