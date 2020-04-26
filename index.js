@@ -42,13 +42,13 @@ inquirer
         },
         {
             name: 'Usage',
-            message: 'How do you use your project?',
+            message: 'Usage?',
             default: 'Use',
         },
         {
-            name: 'License',
-            message: 'What license does your project hold?',
-            default: 'License',
+            name: 'Tests',
+            message: 'How to Test?',
+            default: 'Test',
         },
         {
             name: 'Contributing',
@@ -56,14 +56,9 @@ inquirer
             default: 'Contribute',
         },
         {
-            name: 'Tests',
-            message: 'How to test?',
-            default: 'Test',
-        },
-        {
-            name: 'Questions',
-            message: 'Common questions?',
-            default: 'Question',
+            name: 'License',
+            message: 'What license does your project hold?',
+            default: 'MIT',
         },
     ])
     .then(answers => {
@@ -72,7 +67,7 @@ inquirer
         const queryUrl = `https://api.github.com/users/${answers.username}`;
         axios.get(queryUrl).then(function (res) {
             //if license is equal to mit or MIT
-            if (answers.License === "mit" || answers.License === "MIT"){
+            if (answers.License === "mit" || answers.License === "MIT") {
                 var mitLicense = md.render('[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)');
                 fs.appendFileSync('./Assets/README.md', mitLicense + ' ', function (err) {
                     if (err) throw err;
@@ -86,7 +81,7 @@ inquirer
 
             //if yes to profile picture
             if (answers.photo === 'yes') {
-                var photo = md.render(`![Profile Picture](${res.data.avatar_url}){: width=150 height=100 style="float:right; padding:16px"}`);
+                var photo = md.render(`![Profile Picture](${res.data.avatar_url} =100x100)`);
                 fs.appendFileSync('./Assets/README.md', photo + '\n', function (err) {
                     if (err) throw err;
                 })
@@ -154,7 +149,7 @@ inquirer
                     if (err) throw err;
                 })
                 var faqDemo = md.render('* __How do I do _specifically_ do and so?__ \n  * No problem! Just do this...')
-                fs.appendFileSync('./Assets/README.md', answers.Questions + '\n', function (err) {
+                fs.appendFileSync('./Assets/README.md', faqDemo + '\n', function (err) {
                     if (err) throw err;
                 })
                 //Support

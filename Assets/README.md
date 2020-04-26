@@ -1,5 +1,6 @@
-<p><a href="http://commonmark.org"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg" alt="made-with-Markdown"></a></p>
- <p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4" alt="Profile Picture">{: width=150 height=100 style=&quot;float:right; padding:16px&quot;}</p>
+<p><a href="https://lbesson.mit-license.org/"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license"></a></p>
+ <p><a href="http://commonmark.org"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg" alt="made-with-Markdown"></a></p>
+ <p>![Profile Picture](https://avatars1.githubusercontent.com/u/59855054?v=4 =100x100)</p>
 
 <h1>Title</h1>
 
@@ -32,7 +33,14 @@ Test
 Contribute
 <h1>FAQ</h1>
 
-Question
+<ul>
+<li><strong>How do I do <em>specifically</em> do and so?</strong>
+<ul>
+<li>No problem! Just do this...</li>
+</ul>
+</li>
+</ul>
+
 <h1>Support</h1>
 
 Reach out to me! 
@@ -42,4 +50,4 @@ Reach out to me!
 
 <h1>License</h1>
 
-License
+MIT
