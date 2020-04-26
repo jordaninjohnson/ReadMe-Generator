@@ -31,13 +31,17 @@ npm i
 Test
 <h1>Contributing</h1>
 
-<p><strong>Step 1</strong></p>
+<p><strong>Instructions</strong></p>
 <ul>
-<li>Fork or Clone repo to your local machine
-<strong>Step 2</strong></li>
-<li>HACK AWAY!
-<strong>Step 3</strong></li>
-<li>Create a new pull request</li>
+<li>
+<p>Fork or Clone repo to your local machine</p>
+</li>
+<li>
+<p>HACK AWAY!</p>
+</li>
+<li>
+<p>Create a new pull request</p>
+</li>
 </ul>
 
 <h1>FAQ</h1>
@@ -54,7 +58,7 @@ Test
 
 Reach out to me! 
 <ul>
-<li>GitHub Email: jinj</li>
+<li>GitHub Email:</li>
 </ul>
 
 <h1>License</h1>

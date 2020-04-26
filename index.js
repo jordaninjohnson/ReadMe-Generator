@@ -128,7 +128,7 @@ inquirer
                 fs.appendFileSync('./Assets/README.md', contributingTitle + '\n', function (err) {
                     if (err) throw err;
                 })
-                var contributingInfo = md.render('__Step 1__ \n * Fork or Clone repo to your local machine \n __Step 2__ \n * HACK AWAY! \n __Step 3__ \n * Create a new pull request');
+                var contributingInfo = md.render('__Instructions__ \n * Fork or Clone repo to your local machine \n \n * HACK AWAY! \n \n * Create a new pull request');
                 fs.appendFileSync('./Assets/README.md', contributingInfo + '\n', function (err) {
                     if (err) throw err;
                 })
