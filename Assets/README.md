@@ -52,7 +52,7 @@ Test
 
 Reach out to me! 
 <ul>
-<li>GitHub Email: jinj95@github.com</li>
+<li>GitHub Email:</li>
 </ul>
 
 <h1>License</h1>
