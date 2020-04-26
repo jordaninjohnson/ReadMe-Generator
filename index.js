@@ -73,12 +73,17 @@ inquirer
         axios.get(queryUrl).then(function (res) {
             //if license is equal to mit or MIT
             if (answers.License === "mit" || answers.License === "MIT"){
-                var mitLicense = md.render('[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)');
-                fs.appendFileSync('./Assets/README.md', mitLicense + '\n', function (err) {
+                var mitLicense = md.render('[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)');
+                fs.appendFileSync('./Assets/README.md', mitLicense + ' ', function (err) {
                     if (err) throw err;
                 })
             }
-            
+            // made with markdown badge
+            var markDownBadge = md.render('[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)');
+            fs.appendFileSync('./Assets/README.md', markDownBadge + ' '), function (err) {
+                if (err) throw err;
+            }
+
             //if yes to profile picture
             if (answers.photo === 'yes') {
                 var photo = md.render(`![Profile Picture](${res.data.avatar_url}{height=50px})`);
@@ -91,7 +96,7 @@ inquirer
                 var projectTitle = md.render('# ' + answers.Title);
                 fs.appendFileSync('./Assets/README.md', projectTitle + '\n', function (err) {
                     if (err) throw err;
-                    console.log('title saved');
+                    //console.log('title saved');
                 })
                 //Description
                 var descriptionTitle = md.render('# Description');
