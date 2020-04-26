@@ -59,19 +59,17 @@ inquirer
             //if license is equal to mit or MIT
             if (answers.License === "mit" || answers.License === "MIT") {
                 var mitLicense = md.render('[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)');
-                fs.appendFileSync('./Assets/README.md', mitLicense + ' ', function (err) {
-                    if (err) throw err;
-                })
             }
             // made with markdown badge
             var markDownBadge = md.render('[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)');
-            fs.appendFileSync('./Assets/README.md', markDownBadge + ' '), function (err) {
+            fs.appendFileSync('./Assets/README.md', markDownBadge + mitLicense + '\n'), function (err) {
                 if (err) throw err;
             }
 
             //if yes to profile picture
             if (answers.photo === 'yes') {
-                var photo = md.render(`![Profile Picture](${res.data.avatar_url}?s=200)`);
+                var sizedPhoto = res.data.avatar_url + '?s=200';
+                var photo = md.render(`![Profile Picture](${sizedPhoto})`);
                 fs.appendFileSync('./Assets/README.md', photo + '\n', function (err) {
                     if (err) throw err;
                 })
@@ -130,7 +128,7 @@ inquirer
                 fs.appendFileSync('./Assets/README.md', contributingTitle + '\n', function (err) {
                     if (err) throw err;
                 })
-                var contributingInfo = '__Step 1__ \n  __* Fork or Clone repo to your local machine__ \n __Step 2__ \n __* HACK AWAY!__ \n __Step 3__ \n __* Create a new pull request__'
+                var contributingInfo = md.render('__Step 1__ \n  __* Fork or Clone repo to your local machine__ \n __Step 2__ \n __* HACK AWAY!__ \n __Step 3__ \n __* Create a new pull request__');
                 fs.appendFileSync('./Assets/README.md', contributingInfo + '\n', function (err) {
                     if (err) throw err;
                 })
