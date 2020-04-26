@@ -153,7 +153,7 @@ inquirer
                 fs.appendFileSync('./Assets/README.md', questionsTitle + '\n', function (err) {
                     if (err) throw err;
                 })
-                var faqDemo = md.render('* __How do I do _specifically_ do and so?__ \n  ')
+                var faqDemo = md.render('* __How do I do _specifically_ do and so?__ \n  * No problem! Just do this...')
                 fs.appendFileSync('./Assets/README.md', answers.Questions + '\n', function (err) {
                     if (err) throw err;
                 })
