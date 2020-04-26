@@ -1,4 +1,4 @@
-<p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4%7Bwidth=250px%7D" alt="Profile Picture"></p>
+<p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4%7Bwidth=100px%7D" alt="Profile Picture"></p>
 
 <h1>Title</h1>
 
