@@ -38,22 +38,12 @@ inquirer
         {
             name: 'Installation',
             message: 'How do you install your project?',
-            default: 'Installation',
-        },
-        {
-            name: 'Usage',
-            message: 'Usage?',
-            default: 'Use',
+            default: 'npm i',
         },
         {
             name: 'Tests',
             message: 'How to Test?',
             default: 'Test',
-        },
-        {
-            name: 'Contributing',
-            message: 'How to contribute?',
-            default: 'Contribute',
         },
         {
             name: 'License',
@@ -81,7 +71,7 @@ inquirer
 
             //if yes to profile picture
             if (answers.photo === 'yes') {
-                var photo = md.render(`![Profile Picture](${res.data.avatar_url} =100x100)`);
+                var photo = md.render(`![Profile Picture](${res.data.avatar_url}?s=200)`);
                 fs.appendFileSync('./Assets/README.md', photo + '\n', function (err) {
                     if (err) throw err;
                 })
@@ -124,7 +114,7 @@ inquirer
                 fs.appendFileSync('./Assets/README.md', usageTitle + '\n', function (err) {
                     if (err) throw err;
                 })
-                fs.appendFileSync('./Assets/README.md', answers.Usage + '\n', function (err) {
+                fs.appendFileSync('./Assets/README.md', '* Provide instructions and examples for use. Include screenshots as needed.' + '\n', function (err) {
                     if (err) throw err;
                 })
                 //Tests
@@ -140,7 +130,8 @@ inquirer
                 fs.appendFileSync('./Assets/README.md', contributingTitle + '\n', function (err) {
                     if (err) throw err;
                 })
-                fs.appendFileSync('./Assets/README.md', answers.Contributing + '\n', function (err) {
+                var contributingInfo = '__Step 1__ \n  __* Fork or Clone repo to your local machine__ \n __Step 2__ \n __* HACK AWAY!__ \n __Step 3__ \n __* Create a new pull request__'
+                fs.appendFileSync('./Assets/README.md', contributingInfo + '\n', function (err) {
                     if (err) throw err;
                 })
                 //FAQ

@@ -1,6 +1,6 @@
 <p><a href="https://lbesson.mit-license.org/"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license"></a></p>
  <p><a href="http://commonmark.org"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg" alt="made-with-Markdown"></a></p>
- <p>![Profile Picture](https://avatars1.githubusercontent.com/u/59855054?v=4 =100x100)</p>
+ <p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4?s=200" alt="Profile Picture"></p>
 
 <h1>Title</h1>
 
@@ -21,16 +21,21 @@ Description
 
 <h1>Installation</h1>
 
-Installation
+npm i
 <h1>Usage</h1>
 
-Use
+* Provide instructions and examples for use. Include screenshots as needed.
 <h1>Tests</h1>
 
 Test
 <h1>Contributing</h1>
 
-Contribute
+__Step 1__ 
+  __* Fork or Clone repo to your local machine__ 
+ __Step 2__ 
+ __* HACK AWAY!__ 
+ __Step 3__ 
+ __* Create a new pull request__
 <h1>FAQ</h1>
 
 <ul>
