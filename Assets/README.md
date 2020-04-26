@@ -1,8 +1,6 @@
 <p><a href="http://commonmark.org"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg" alt="made-with-Markdown"></a></p>
 <p><a href="https://lbesson.mit-license.org/"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license"></a></p>
 
-<p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4&amp;s=200" alt="Profile Picture"></p>
-
 <h1>Title</h1>
 
 <h1>Description</h1>
@@ -37,7 +35,8 @@ Test
 <p>Fork or Clone repo to your local machine</p>
 </li>
 <li>
-<p>HACK AWAY!</p>
+<p>HACK AWAY!
+<strong>Step 3</strong></p>
 </li>
 <li>
 <p>Create a new pull request</p>
@@ -60,6 +59,8 @@ Reach out to me!
 <ul>
 <li>GitHub Email:</li>
 </ul>
+
+<p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4&amp;s=200" alt="Profile Picture"></p>
 
 <h1>License</h1>
 
