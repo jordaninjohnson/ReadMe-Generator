@@ -71,6 +71,14 @@ inquirer
         //github
         const queryUrl = `https://api.github.com/users/${answers.username}`;
         axios.get(queryUrl).then(function (res) {
+            //if license is equal to mit or MIT
+            if (answers.License === "mit" || answers.License === "MIT"){
+                var mitLicense = md.render('[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)');
+                fs.appendFileSync('./Assets/README.md', mitLicense + '\n', function (err) {
+                    if (err) throw err;
+                })
+            }
+            
             //if yes to profile picture
             if (answers.photo === 'yes') {
                 var photo = md.render(`![Profile Picture](${res.data.avatar_url}{height=50px})`);

@@ -1,3 +1,5 @@
+<p><a href="https://github.com/Naereen/StrapDown.js/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Naereen/StrapDown.js.svg" alt="GitHub license"></a></p>
+
 <p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4%7Bheight=50px%7D" alt="Profile Picture"></p>
 
 <h1>Title</h1>
@@ -24,7 +26,7 @@ Installation
 Use
 <h1>License</h1>
 
-License
+mit
 <h1>Contributing</h1>
 
 Contribute
