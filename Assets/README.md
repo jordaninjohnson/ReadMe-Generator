@@ -1,4 +1,4 @@
-<p>![Profile Picture](https://avatars1.githubusercontent.com/u/59855054?v=4{width=100px height=100px})</p>
+<p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4%7Bheight=50px%7D" alt="Profile Picture"></p>
 
 <h1>Title</h1>
 

@@ -73,7 +73,7 @@ inquirer
         axios.get(queryUrl).then(function (res) {
             //if yes to profile picture
             if (answers.photo === 'yes') {
-                var photo = md.render(`![Profile Picture](${res.data.avatar_url}{width=100px height=100px})`);
+                var photo = md.render(`![Profile Picture](${res.data.avatar_url}{height=50px})`);
                 fs.appendFileSync('./Assets/README.md', photo + '\n', function (err) {
                     if (err) throw err;
                 })
