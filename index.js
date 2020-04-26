@@ -86,7 +86,7 @@ inquirer
 
             //if yes to profile picture
             if (answers.photo === 'yes') {
-                var photo = md.render(`![Profile Picture](${res.data.avatar_url}{height=50px})`);
+                var photo = md.render(`![Profile Picture](${res.data.avatar_url}){: width=150 height=100 style="float:right; padding:16px"}`);
                 fs.appendFileSync('./Assets/README.md', photo + '\n', function (err) {
                     if (err) throw err;
                 })
@@ -111,7 +111,7 @@ inquirer
                 fs.appendFileSync('./Assets/README.md', tableOfContentsTitle + '\n', function (err) {
                     if (err) throw err;
                 })
-                const tableOfContents = md.render('* [Installation](#installation) \n * [Usage](#usage) \n * [License](#license) \n * [Contributing](#contributing) \n * [Tests](#tests) \n * [Questions](#questions)');
+                const tableOfContents = md.render('* [Installation](#installation) \n * [Usage](#usage) \n * [Tests](#tests) \n * [Contributing](#contributing) \n * [FAQ](#FAQ) \n * [Support](#support) \n * [License](#license)');
                 fs.appendFileSync('./Assets/README.md', tableOfContents + '\n', function (err) {
                     if (err) throw err;
                 })
@@ -132,12 +132,12 @@ inquirer
                 fs.appendFileSync('./Assets/README.md', answers.Usage + '\n', function (err) {
                     if (err) throw err;
                 })
-                //License
-                var licenseTitle = md.render('# License');
-                fs.appendFileSync('./Assets/README.md', licenseTitle + '\n', function (err) {
+                //Tests
+                var testsTitle = md.render('# Tests');
+                fs.appendFileSync('./Assets/README.md', testsTitle + '\n', function (err) {
                     if (err) throw err;
                 })
-                fs.appendFileSync('./Assets/README.md', answers.License + '\n', function (err) {
+                fs.appendFileSync('./Assets/README.md', answers.Tests + '\n', function (err) {
                     if (err) throw err;
                 })
                 //Contributing
@@ -148,20 +148,30 @@ inquirer
                 fs.appendFileSync('./Assets/README.md', answers.Contributing + '\n', function (err) {
                     if (err) throw err;
                 })
-                //Tests
-                var testsTitle = md.render('# Tests');
-                fs.appendFileSync('./Assets/README.md', testsTitle + '\n', function (err) {
-                    if (err) throw err;
-                })
-                fs.appendFileSync('./Assets/README.md', answers.Tests + '\n', function (err) {
-                    if (err) throw err;
-                })
-                //Questions
-                var questionsTitle = md.render('# Questions');
+                //FAQ
+                var questionsTitle = md.render('# FAQ');
                 fs.appendFileSync('./Assets/README.md', questionsTitle + '\n', function (err) {
                     if (err) throw err;
                 })
+                var faqDemo = md.render('* __How do I do _specifically_ do and so?__ \n  ')
                 fs.appendFileSync('./Assets/README.md', answers.Questions + '\n', function (err) {
+                    if (err) throw err;
+                })
+                //Support
+                var supportTitle = md.render('# Support');
+                fs.appendFileSync('./Assets/README.md', supportTitle + '\n', function (err) {
+                    if (err) throw err;
+                })
+                var supportEmail = md.render(`* GitHub Email: ${answers.email}`);
+                fs.appendFileSync('./Assets/README.md', 'Reach out to me! \n' + supportEmail + '\n', function (err) {
+                    if (err) throw err;
+                })
+                //License
+                var licenseTitle = md.render('# License');
+                fs.appendFileSync('./Assets/README.md', licenseTitle + '\n', function (err) {
+                    if (err) throw err;
+                })
+                fs.appendFileSync('./Assets/README.md', answers.License + '\n', function (err) {
                     if (err) throw err;
                 })
             }
