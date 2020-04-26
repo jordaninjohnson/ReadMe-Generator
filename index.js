@@ -68,7 +68,7 @@ inquirer
 
             //if yes to profile picture
             if (answers.photo === 'yes') {
-                var sizedPhoto = res.data.avatar_url + '?s=200';
+                var sizedPhoto = res.data.avatar_url + '?s=100';
                 var photo = md.render(`![Profile Picture](${sizedPhoto})`);
                 fs.appendFileSync('./Assets/README.md', photo + '\n', function (err) {
                     if (err) throw err;
@@ -128,7 +128,7 @@ inquirer
                 fs.appendFileSync('./Assets/README.md', contributingTitle + '\n', function (err) {
                     if (err) throw err;
                 })
-                var contributingInfo = md.render('__Step 1__ \n  __* Fork or Clone repo to your local machine__ \n __Step 2__ \n __* HACK AWAY!__ \n __Step 3__ \n __* Create a new pull request__');
+                var contributingInfo = md.render('__Step 1__ \n * Fork or Clone repo to your local machine \n __Step 2__ \n * HACK AWAY! \n __Step 3__ \n * Create a new pull request');
                 fs.appendFileSync('./Assets/README.md', contributingInfo + '\n', function (err) {
                     if (err) throw err;
                 })

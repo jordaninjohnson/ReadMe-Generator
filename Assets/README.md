@@ -1,7 +1,7 @@
 <p><a href="http://commonmark.org"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg" alt="made-with-Markdown"></a></p>
 <p><a href="https://lbesson.mit-license.org/"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license"></a></p>
 
-<p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4?s=200" alt="Profile Picture"></p>
+<p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4?s=100" alt="Profile Picture"></p>
 
 <h1>Title</h1>
 
@@ -31,12 +31,14 @@ npm i
 Test
 <h1>Contributing</h1>
 
-<p><strong>Step 1</strong>
-<strong>* Fork or Clone repo to your local machine</strong>
-<strong>Step 2</strong>
-<strong>* HACK AWAY!</strong>
-<strong>Step 3</strong>
-<strong>* Create a new pull request</strong></p>
+<p><strong>Step 1</strong></p>
+<ul>
+<li>Fork or Clone repo to your local machine
+<strong>Step 2</strong></li>
+<li>HACK AWAY!
+<strong>Step 3</strong></li>
+<li>Create a new pull request</li>
+</ul>
 
 <h1>FAQ</h1>
 
