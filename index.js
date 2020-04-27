@@ -61,8 +61,8 @@ inquirer
                 var mitLicense = md.render('[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)');
             }
             // made with markdown badge
-            var markDownBadge = md.render('[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)');
-            fs.appendFileSync('./Assets/README.md', markDownBadge + mitLicense + '\n'), function (err) {
+            //var markDownBadge = md.render('[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)');
+            fs.appendFileSync('./Assets/README.md', mitLicense + '\n'), function (err) {
                 if (err) throw err;
             }
 
@@ -121,7 +121,7 @@ inquirer
             fs.appendFileSync('./Assets/README.md', contributingTitle + '\n', function (err) {
                 if (err) throw err;
             })
-            var contributingInfo = md.render('__Instructions__ \n * Fork or Clone repo to your local machine \n \n * HACK AWAY! \n __Step 3__ \n * Create a new pull request');
+            var contributingInfo = md.render('__Instructions__ \n * Fork or Clone repo to your local machine \n \n * HACK AWAY! \n \n * Create a new pull request');
             fs.appendFileSync('./Assets/README.md', contributingInfo + '\n', function (err) {
                 if (err) throw err;
             })
