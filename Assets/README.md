@@ -1,10 +1,10 @@
 <p><a href="https://lbesson.mit-license.org/"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license"></a></p>
 
-<h1>hi</h1>
+<h1>This is the Title of My Project!</h1>
 
 <h1>Description</h1>
 
-bye
+This is an awesome README Template!
 <h1>Table of Contents</h1>
 
 <ul>
@@ -19,13 +19,26 @@ bye
 
 <h1>Installation</h1>
 
-npm i
+<ul>
+<li>All the code required to get started</li>
+<li>images of what it should look like</li>
+</ul>
+<h2>Clone</h2>
+<ul>
+<li>Clone this repo to your local machine</li>
+</ul>
+<h2>Setup</h2>
+<ul>
+<li>Update and install packages</li>
+</ul>
+
+Use this command: npm i
 <h1>Usage</h1>
 
 * Provide instructions and examples for use. Include screenshots as needed.
 <h1>Tests</h1>
 
-Test
+Use this command to run test: Test
 <h1>Contributing</h1>
 
 <p><strong>Instructions</strong></p>
@@ -55,11 +68,11 @@ Test
 
 Reach out to me! 
 <ul>
-<li>GitHub Email: jinj95@github.com</li>
+<li>GitHub Email: jordaninjohnson@gmail.com</li>
 </ul>
 
 <p><img src="https://avatars1.githubusercontent.com/u/59855054?v=4&amp;s=200" alt="Profile Picture"></p>
 
 <h1>License</h1>
 
-MIT
+License: MIT

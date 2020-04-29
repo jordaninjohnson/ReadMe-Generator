@@ -4,6 +4,7 @@ const axios = require("axios");
 const inquirer = require('inquirer');
 const MarkdownIt = require('markdown-it');
 const util = require('util');
+
 // Markdown
 md = new MarkdownIt();
 
@@ -27,7 +28,7 @@ inquirer
         },
         {
             name: 'Title',
-            message: 'Enter your Project Title?',
+            message: 'Enter your Project Title:',
             default: 'Title',
         },
         {
@@ -37,12 +38,12 @@ inquirer
         },
         {
             name: 'Installation',
-            message: 'How do you install your project?',
+            message: 'Enter the command to install your project?',
             default: 'npm i',
         },
         {
             name: 'Tests',
-            message: 'How to Test?',
+            message: 'How do you test your project?',
             default: 'Test',
         },
         {
@@ -65,8 +66,6 @@ inquirer
             fs.appendFileSync('./Assets/README.md', mitLicense + '\n'), function (err) {
                 if (err) throw err;
             }
-
-
             //Title
             //creates a variable for title that is <h1> in MD
             var projectTitle = md.render('# ' + answers.Title);
@@ -91,13 +90,20 @@ inquirer
             fs.appendFileSync('./Assets/README.md', tableOfContents + '\n', function (err) {
                 if (err) throw err;
             })
-
             //Installation
             var installationTitle = md.render('# Installation');
             fs.appendFileSync('./Assets/README.md', installationTitle + '\n', function (err) {
                 if (err) throw err;
             })
-            fs.appendFileSync('./Assets/README.md', answers.Installation + '\n', function (err) {
+            var installInstructions = md.render('* All the code required to get started \n * images of what it should look like \n');
+            var clone = md.render('## Clone \n * Clone this repo to your local machine \n');
+            var setup = md.render('## Setup \n * Update and install packages \n')
+
+            fs.appendFileSync('./Assets/README.md', installInstructions + clone + setup + '\n', function (err) {
+                if (err) throw err;
+            })
+
+            fs.appendFileSync('./Assets/README.md', 'Use this command: ' + answers.Installation + '\n', function (err) {
                 if (err) throw err;
             })
             //Usage
@@ -113,7 +119,7 @@ inquirer
             fs.appendFileSync('./Assets/README.md', testsTitle + '\n', function (err) {
                 if (err) throw err;
             })
-            fs.appendFileSync('./Assets/README.md', answers.Tests + '\n', function (err) {
+            fs.appendFileSync('./Assets/README.md', 'Use this command to run test: ' + answers.Tests + '\n', function (err) {
                 if (err) throw err;
             })
             //Contributing
@@ -154,10 +160,15 @@ inquirer
             fs.appendFileSync('./Assets/README.md', licenseTitle + '\n', function (err) {
                 if (err) throw err;
             })
-            fs.appendFileSync('./Assets/README.md', answers.License + '\n', function (err) {
+
+            //if license is equal to mit or MIT
+            if (answers.License === "mit" || answers.License === "MIT") {
+                var mitLicense = md.render('[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)');
+            }
+
+            fs.appendFileSync('./Assets/README.md', 'License: ' + answers.License + '\n', function (err) {
                 if (err) throw err;
             })
-
             return //console.log(res);
         });
     });
