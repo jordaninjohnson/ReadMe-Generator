@@ -36,7 +36,7 @@ Example of output in Assets folder.
 
 <h2>Run it!<h2>
 <ul>
-  <li>Run the application by entering <code>node index.js</code> in your terminal</li>
+<li>Run the application by entering <code>node index.js</code></li>
 </ul>
 <h1>Usage</h1>
 
