@@ -4,7 +4,8 @@
 
 <h1>Description</h1>
 
-This is an Awesome README Generator using Node.js! Example of output in Assets folder.
+This is an Awesome README Generator using Node.js. Use this application to create a great README template for any project!
+Example of output in Assets folder.
 <h1>Table of Contents</h1>
 
 <ul>
@@ -12,39 +13,38 @@ This is an Awesome README Generator using Node.js! Example of output in Assets f
 <li><a href="#usage">Usage</a></li>
 <li><a href="#tests">Tests</a></li>
 <li><a href="#contributing">Contributing</a></li>
-<li><a href="#FAQ">FAQ</a></li>
+<li><a href="#faq">FAQ</a></li>
 <li><a href="#support">Support</a></li>
 <li><a href="#license">License</a></li>
 </ul>
 
 <h1>Installation</h1>
 
+<h2>Clone or Download</h2>
 <ul>
-<li>All the code required to get started</li>
-<li>images of what it should look like</li>
-</ul>
-<h2>Clone</h2>
-<ul>
-<li>Clone this repo to your local machine</li>
+<li>Clone or download this repo to your local machine</li>
 </ul>
 <h2>Setup</h2>
 <ul>
-<li>Update and install packages</li>
+<li>Open your terminal and find the project folder.</li>
 </ul>
 
 <ul>
-<li>For this project use this command:</li>
+<li>Use this command to download packages:<code>npm i</code>
+</li>
 </ul>
-npm i
+
+<h2>Run it!<h2>
+<ul>
+  <li>Run the application by entering <code>node index.js</code> in your terminal
 <h1>Usage</h1>
 
 ![Gif](http://g.recordit.co/62neacOYWI.gif)
 <h1>Tests</h1>
 
 <ul>
-<li>For this project use this command:</li>
+<li>For this project use this command:<code>This is a test command</code></li>
 </ul>
-This is a test command
 <h1>Contributing</h1>
 
 <p><strong>Instructions</strong></p>
@@ -63,11 +63,12 @@ This is a test command
 <h1>FAQ</h1>
 
 <ul>
-<li><strong>How do I do <em>specifically</em> so and so?</strong>
+<li><strong>How do I begin creating a new README for my project?</strong>
 <ul>
-<li>No problem! Just do this...</li>
+<li>Install the application and then delete the sample README in the Assets folder. </li>
+  <li>Run the application by entering the command <code>node index.js</code> </li>
+  <li>Once you have completed the prompts a new README will be generated in the Assets folder.
 </ul>
-</li>
 </ul>
 
 <h1>Support</h1>
@@ -84,7 +85,5 @@ Reach out to me!
 <p><a href="https://lbesson.mit-license.org/"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license"></a></p>
 
 <ul>
-<li>License:</li>
+<li>License: MIT</li>
 </ul>
-
-MIT
