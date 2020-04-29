@@ -98,12 +98,13 @@ inquirer
             var installInstructions = md.render('* All the code required to get started \n * images of what it should look like \n');
             var clone = md.render('## Clone \n * Clone this repo to your local machine \n');
             var setup = md.render('## Setup \n * Update and install packages \n')
+            var forThisProject = md.render('* For this project use this command: ');
 
             fs.appendFileSync('./Assets/README.md', installInstructions + clone + setup + '\n', function (err) {
                 if (err) throw err;
             })
 
-            fs.appendFileSync('./Assets/README.md', 'Use this command: ' + answers.Installation + '\n', function (err) {
+            fs.appendFileSync('./Assets/README.md', forThisProject + answers.Installation + '\n', function (err) {
                 if (err) throw err;
             })
             //Usage
@@ -119,7 +120,7 @@ inquirer
             fs.appendFileSync('./Assets/README.md', testsTitle + '\n', function (err) {
                 if (err) throw err;
             })
-            fs.appendFileSync('./Assets/README.md', 'Use this command to run test: ' + answers.Tests + '\n', function (err) {
+            fs.appendFileSync('./Assets/README.md', forThisProject + answers.Tests + '\n', function (err) {
                 if (err) throw err;
             })
             //Contributing
@@ -166,7 +167,8 @@ inquirer
                 var mitLicense = md.render('[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)');
             }
 
-            fs.appendFileSync('./Assets/README.md', 'License: ' + answers.License + '\n', function (err) {
+            var license = md.render('* License: ');
+            fs.appendFileSync('./Assets/README.md', license + answers.License + '\n', function (err) {
                 if (err) throw err;
             })
             return //console.log(res);
