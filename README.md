@@ -68,7 +68,7 @@ Example of output in Assets folder.
 <ul>
 <li>Install the application and then delete the sample README in the Assets folder. </li>
   <li>Run the application by entering the command <code>node index.js</code> </li>
-  <li>Once you have completed the prompts a new README will be generated in the Assets folder.
+  <li>Once you have completed the prompts a new README.md will be generated in the Assets folder.
 </ul>
 </ul>
 
