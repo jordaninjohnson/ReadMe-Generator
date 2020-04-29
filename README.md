@@ -38,7 +38,7 @@ This is an Awesome README Generator using Node.js! Example of output in Assets f
 npm i
 <h1>Usage</h1>
 
-* Provide instructions and examples for use. Include screenshots as needed.
+![Gif](http://g.recordit.co/62neacOYWI.gif)
 <h1>Tests</h1>
 
 <ul>
