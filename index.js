@@ -137,7 +137,7 @@ inquirer
             fs.appendFileSync('./Assets/README.md', questionsTitle + '\n', function (err) {
                 if (err) throw err;
             })
-            var faqDemo = md.render('* __How do I do _specifically_ do and so?__ \n  * No problem! Just do this...')
+            var faqDemo = md.render('* __How do I do _specifically_ so and so?__ \n  * No problem! Just do this...')
             fs.appendFileSync('./Assets/README.md', faqDemo + '\n', function (err) {
                 if (err) throw err;
             })
@@ -166,9 +166,13 @@ inquirer
             if (answers.License === "mit" || answers.License === "MIT") {
                 var mitLicense = md.render('[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)');
             }
+            fs.appendFileSync('./Assets/README.md', mitLicense + '\n'), function (err) {
+                if (err) throw err;
+            }
+
 
             var license = md.render('* License: ');
-            fs.appendFileSync('./Assets/README.md', license + answers.License + '\n', function (err) {
+            fs.appendFileSync('./Assets/README.md', license + '\n' + answers.License + '\n', function (err) {
                 if (err) throw err;
             })
             return //console.log(res);

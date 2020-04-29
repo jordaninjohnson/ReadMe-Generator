@@ -1,6 +1,6 @@
 <p><a href="https://lbesson.mit-license.org/"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license"></a></p>
 
-<h1>This is the Title of My Project</h1>
+<h1>This is My Title!</h1>
 
 <h1>Description</h1>
 
@@ -44,7 +44,7 @@ npm i
 <ul>
 <li>For this project use this command:</li>
 </ul>
-Test
+This is a test command
 <h1>Contributing</h1>
 
 <p><strong>Instructions</strong></p>
@@ -63,7 +63,7 @@ Test
 <h1>FAQ</h1>
 
 <ul>
-<li><strong>How do I do <em>specifically</em> do and so?</strong>
+<li><strong>How do I do <em>specifically</em> so and so?</strong>
 <ul>
 <li>No problem! Just do this...</li>
 </ul>
@@ -81,7 +81,10 @@ Reach out to me!
 
 <h1>License</h1>
 
+<p><a href="https://lbesson.mit-license.org/"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license"></a></p>
+
 <ul>
 <li>License:</li>
 </ul>
+
 MIT
