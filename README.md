@@ -26,7 +26,7 @@ Example of output in Assets folder.
 </ul>
 <h2>Setup</h2>
 <ul>
-<li>Open your terminal and find the project folder.</li>
+<li>Open your terminal and locate into the root directory of the project folder.</li>
 </ul>
 
 <ul>
