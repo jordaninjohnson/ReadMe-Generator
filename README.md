@@ -3,8 +3,7 @@
 <h1>ReadMe-Generator!</h1>
 
 <h1>Description</h1>
-
-This is an Awesome README Generator using Node.js. Use this application to create a great README template for any project!
+Standardizing how you write your README makes creating and maintaining your READMEs easier. It should tell people why they should use your code, how they can install it, and how they can use it. Within your command prompt create and customize a README with ReadMe-Generator.
 Example of output in Assets folder.
 <h1>Table of Contents</h1>
 
